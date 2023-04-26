@@ -73,23 +73,15 @@ The code can be used to replicate our results from the paper:
 
 ### Running the baseline model
 
-Get predictions for the test data, using the trained model from:
+Get predictions for the test data, using the trained models 
+from three random initialisations (see config):
 
-##### run 1:
+##### run 1 - 3:
 ```typescript
-python mope_predict.py orl-1-predict-bert.conf
+python src/mope_predict_l3.py config/pred_l3.conf 
 ```
 
-##### run 2:
-```typescript
-python mope_predict.py orl-2-predict-bert.conf
-```
-
-##### run 3:
-```typescript
-python mope_predict.py orl-3-predict-bert.conf
-```
-
+System output is written to folder <predictions>.
 
 You can evaluate the predictions by running:
 
