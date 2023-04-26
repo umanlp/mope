@@ -28,36 +28,36 @@ The code can be used to replicate our results from the paper:
 ### Content:
 
 ```
-- **mope_baseline_system** 
+- mope_baseline_system
       - models/ORL-1 (the 3 MoPE models)
-      - **src** (the source code)
+      - src (the source code)
         - mope_train.py
         - mope_predict.py
         - tagger.py
         - helpers.py
         - evaluation.py
-      - **config** (the config files)  
-      - **models**
+      - config (the config files)  
+      - models
         - BERT-MOPE-L3
           - run[1-3]
-      - **results**
+      - results
         - (folder for system predictions and results)
 
 
-- **mope_tri_system** 
+- mope_tri_system 
       - models/ORL-1 (the 3 MoPE models)
-      - **src** (the source code)
+      - src (the source code)
         - mope_train.py
         - mope_predict.py
         - tagger.py
         - helpers.py
         - evaluation.py
-      - **config** (the config files)  
-      - **models**
+      - config (the config files)  
+      - models
         - 
-      - **results**
+      - results
 
-      - **data**
+      - data
         - MOPE
           - l1
             - train/dev/test.json
