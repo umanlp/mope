@@ -73,7 +73,7 @@ Download the model directories for the baseline models:
 
   * [model1](https://data.dws.informatik.uni-mannheim.de/mope/bert-base-german-cased-finetuned-MOPE-L3_Run_1_Epochs_43.tgz), [model2](https://data.dws.informatik.uni-mannheim.de/mope/bert-base-german-cased-finetuned-MOPE-L3_Run_2_Epochs_29.tgz), [model3](https://data.dws.informatik.uni-mannheim.de/mope/bert-base-german-cased-finetuned-MOPE-L3_Run_3_Epochs_31.tgz)
 
-and put them in the folders run1, run2 and run3 in mope_baseline/models/BERT-MOPE-L3/
+and put them in the folders run1, run2 and run3 under mope_baseline/models/BERT-MOPE-L3/
 
 Decompress the three model folders:
 - tar -xzf bert-base-german-cased-finetuned-MOPE-L3_Run_1_Epochs_43.tgz
@@ -112,6 +112,17 @@ If you want to change the model parameters or input/output path, you need to cha
 ------------------------
 
 ### Running the tri-training model (folder: mope_tri)
+   
+
+Download the model directories for the baseline models:
+
+  * [model1](mBERT-finetuned-TRI-L3_Run_1_Epochs_5_39.tgz), [model2](mBERT-finetuned-TRI-L3_Run_2_Epochs_5_45.tgz), [model3](mBERT-finetuned-TRI-L3_Run_3_Epochs_5_26.tgz)
+
+and put them in the folders run1, run2 and run3 under mope_tri/models/mBERT-TRI-L3/
+
+Decompress the three model folders:
+- tar -xzf mBERT-finetuned-TRI-L3_Run_1_Epochs_5_39.tgz
+- tar -xzf ...    
 
 ```typescript
 python src/mope_predict_l3.py config/pred_l3.conf
