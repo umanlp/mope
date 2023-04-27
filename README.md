@@ -1,8 +1,4 @@
-# mope
-
-<h1 align="center">
-<span>Our kind of people? Detecting populist references in political debates</span>
-</h1>
+# Our kind of people? Detecting populist references in political debates
 
 ------------------------
 ## Repository Description
@@ -73,8 +69,24 @@ The code can be used to replicate our results from the paper:
 
 ### Running the baseline model
 
-Get predictions for the test data, using the trained models 
-from three random initialisations (see config):
+Download the model directories for the baseline models:
+
+  * [model1](https://data.dws.informatik.uni-mannheim.de/mope/bert-base-german-cased-finetuned-MOPE-L3_Run_1_Epochs_43.tgz)
+  * [model2](https://data.dws.informatik.uni-mannheim.de/mope/bert-base-german-cased-finetuned-MOPE-L3_Run_2_Epochs_29.tgz)
+  * [model3](https://data.dws.informatik.uni-mannheim.de/mope/bert-base-german-cased-finetuned-MOPE-L3_Run_3_Epochs_31.tgz)
+
+
+Put them in the folders
+- mope_baseline/models/BERT-MOPE-L3/run1/
+- mope_baseline/models/BERT-MOPE-L3/run2/
+- mope_baseline/models/BERT-MOPE-L3/run3/
+
+and decompress them:
+- tar -xzf bert-base-german-cased-finetuned-MOPE-L3_Run_1_Epochs_43.tgz
+- tar -xzf ... 
+
+You can use the following script to get the predictions for the test set
+from each of the three models (also see config file):
 
 ##### run 1 - 3:
 ```typescript
@@ -93,12 +105,16 @@ python eval_predictions.py logfile_ORL_BERT_run_2.log
 python eval_predictions.py logfile_ORL_BERT_run_3.log 
 ```
 
-### Training a new model
+### Training a new baseline model
 
-You can train a new model on the training data and evaluate on the test set, using this script:
+You can train a new model on the training data and evaluate it on the test set, using this script:
 
 ```typescript
-python src/mope_train.py config/train_l3.conf &>log_l3.txt 
+python src/mope_train.py config/train_l3.conf 
 ```
 If you want to change the model parameters or input/output path, you need to change the config file in the config folder.  
+
+
+### Running the tri-training model
+
 
