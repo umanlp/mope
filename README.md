@@ -123,6 +123,11 @@ and put them in the folders run1, run2 and run3 under mope_tri/models/mBERT-TRI-
 Decompress the three model folders:
 - tar -xzf mBERT-finetuned-TRI-L3_Run_1_Epochs_5_39.tgz
 - tar -xzf ...    
+    
+
+You can use the following script to get the predictions for the test set
+(also see the config file):
+    
 
 ```typescript
 python src/mope_predict_l3.py config/pred_l3.conf
