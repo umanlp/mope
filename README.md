@@ -71,17 +71,11 @@ The code can be used to replicate our results from the paper:
 
 Download the model directories for the baseline models:
 
-  * [model1](https://data.dws.informatik.uni-mannheim.de/mope/bert-base-german-cased-finetuned-MOPE-L3_Run_1_Epochs_43.tgz)
-  * [model2](https://data.dws.informatik.uni-mannheim.de/mope/bert-base-german-cased-finetuned-MOPE-L3_Run_2_Epochs_29.tgz)
-  * [model3](https://data.dws.informatik.uni-mannheim.de/mope/bert-base-german-cased-finetuned-MOPE-L3_Run_3_Epochs_31.tgz)
+  * [model1](https://data.dws.informatik.uni-mannheim.de/mope/bert-base-german-cased-finetuned-MOPE-L3_Run_1_Epochs_43.tgz), [model2](https://data.dws.informatik.uni-mannheim.de/mope/bert-base-german-cased-finetuned-MOPE-L3_Run_2_Epochs_29.tgz), [model3](https://data.dws.informatik.uni-mannheim.de/mope/bert-base-german-cased-finetuned-MOPE-L3_Run_3_Epochs_31.tgz)
 
+and put them in the folders run1, run2 and run3 in mope_baseline/models/BERT-MOPE-L3/
 
-Put them in the folders
-- mope_baseline/models/BERT-MOPE-L3/run1/
-- mope_baseline/models/BERT-MOPE-L3/run2/
-- mope_baseline/models/BERT-MOPE-L3/run3/
-
-and decompress them:
+Decompress the three model folders:
 - tar -xzf bert-base-german-cased-finetuned-MOPE-L3_Run_1_Epochs_43.tgz
 - tar -xzf ... 
 
