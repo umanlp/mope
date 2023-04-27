@@ -67,7 +67,7 @@ The code can be used to replicate our results from the paper:
 
 ------------------------
 
-### Running the baseline model
+### Running the baseline model (folder: mope_baseline)
 
 Download the model directories for the baseline models:
 
@@ -87,7 +87,7 @@ from each of the three models (also see config file):
 python src/mope_predict_l3.py config/pred_l3.conf 
 ```
 
-System output is written to folder <predictions>.
+The system output is written to folder <predictions>.
 
 You can evaluate the predictions by running:
 
@@ -109,6 +109,13 @@ python src/mope_train.py config/train_l3.conf
 If you want to change the model parameters or input/output path, you need to change the config file in the config folder.  
 
 
-### Running the tri-training model
+------------------------
+
+### Running the tri-training model (folder: mope_tri)
+
+```typescript
+python src/mope_predict_l3.py config/pred_l3.conf
+
+```
 
 
