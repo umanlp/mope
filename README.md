@@ -116,7 +116,7 @@ If you want to change the model parameters or input/output path, you need to cha
 
 Download the model directories for the baseline models:
 
-  * [model1](mBERT-finetuned-TRI-L3_Run_1_Epochs_5_39.tgz), [model2](mBERT-finetuned-TRI-L3_Run_2_Epochs_5_45.tgz), [model3](mBERT-finetuned-TRI-L3_Run_3_Epochs_5_26.tgz)
+  * [model1](https://data.dws.informatik.uni-mannheim.de/mope/mBERT-finetuned-TRI-L3_Run_1_Epochs_5_39.tgz), [model2](https://data.dws.informatik.uni-mannheim.de/mope/mBERT-finetuned-TRI-L3_Run_2_Epochs_5_45.tgz), [model3](https://data.dws.informatik.uni-mannheim.de/mope/mBERT-finetuned-TRI-L3_Run_3_Epochs_5_26.tgz)
 
 and put them in the folders run1, run2 and run3 under mope_tri/models/mBERT-TRI-L3/
 
