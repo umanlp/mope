@@ -130,8 +130,21 @@ You can use the following script to get the predictions for the test set
     
 
 ```typescript
-python src/mope_predict_l3.py config/pred_l3.conf
-
+python src/mope_predict_l3.py config/pred_l3.conf predfile.txt
 ```
+
+predfile contains the predictions for each of the individual models and the predictions
+for the majority vote.
+
+You can evaluate the results, using the eval.py script:
+
+```typescript
+python eval.py predfile.txt
+```
+
+(Please note that the results for this model are not identical to the paper.
+Instead, we decided to publish models with a slightly higher precision, at the
+cost of recall. F1 for both are nearly the same, with 72.5% F1 (paper, test-en) 
+and 72.7% F1 (the models uploaded here).
 
 
