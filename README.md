@@ -50,8 +50,7 @@ The code can be used to replicate our results from the paper:
         - evaluation.py
       - config (the config files)  
       - models
-        - 
-      - results
+      - results (the 
 
       - data
         - MOPE
