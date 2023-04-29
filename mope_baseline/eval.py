@@ -19,10 +19,10 @@ def eval_seqeval(gold, pred, mode):
     f1 = f1_score([gold], [pred])
     if mode == 'strict':
         print("STRICT EVALUATION")
-        clf_report = classification_report([gold], [pred], mode='strict', digits=4)
+        clf_report = classification_report([gold], [pred], mode='strict', digits=4, zero_division=0)
     else:
         print("NON-STRICT (ignore prefixes)")
-        clf_report = classification_report([gold], [pred], digits=4)
+        clf_report = classification_report([gold], [pred], digits=4, zero_division=0)
     print(clf_report)
 
 

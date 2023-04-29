@@ -413,7 +413,7 @@ if config_parser['TASK'].getboolean('train') == True:
                 logging.info("Predictions not as long as gold")
 
     
-        f1 = f1_score([gold_labels], [pred_labels]) 
+        f1 = f1_score([gold_labels], [pred_labels], zero_division=0) 
         logging.info("F1:\t%s", f1)
 
         trainlogfile.write("Eval:\n")
@@ -423,8 +423,8 @@ if config_parser['TASK'].getboolean('train') == True:
         model_dir = model_save_path + model_name_str + "_" + new_folder
         model_info = model_abbr + "_" + str(RUN) + "_" + str(epoch_i)
 
-        logging.info("SAVE MODEL TO %s", model_dir, model_info)
-        helpers.save_model(model_dir, model_info, model, bert_tokenizer)
+        logging.info("SAVE MODEL TO %s", model_dir)
+        helpers.save_model(model_dir, model, bert_tokenizer)
 
     trainlogfile.close()
     return model
