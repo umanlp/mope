@@ -50,7 +50,8 @@ The code can be used to replicate our results from the paper:
         - evaluation.py
       - config (the config files)  
       - models
-      - results (the 
+        - 
+      - results
 
       - data
         - MOPE
@@ -113,7 +114,7 @@ If you want to change the model parameters or input/output path, you need to cha
 ### Running the tri-training model (folder: mope_tri)
    
 
-Download the model directories for the baseline models:
+Download the model directories for the tri-training models:
 
   * [model1](https://data.dws.informatik.uni-mannheim.de/mope/mBERT-finetuned-TRI-L3_Run_1_Epochs_5_39.tgz), [model2](https://data.dws.informatik.uni-mannheim.de/mope/mBERT-finetuned-TRI-L3_Run_2_Epochs_5_45.tgz), [model3](https://data.dws.informatik.uni-mannheim.de/mope/mBERT-finetuned-TRI-L3_Run_3_Epochs_5_26.tgz)
 
@@ -141,9 +142,9 @@ You can evaluate the results, using the eval.py script:
 python eval.py predfile.txt
 ```
 
-(Please note that the results for this model are not identical to the paper.
-Instead, we decided to publish models with a slightly higher precision, at the
-cost of recall. F1 for both are nearly the same, with 72.5% F1 (paper, test-en) 
-and 72.7% F1 (the models uploaded here).
+(Please note that the results for the models are slightly different from the ones
+in the paper, as we decided to publish models with a slightly higher precision, 
+at the cost of recall. F1 for both are nearly the same, with 72.5% F1 on the English
+test set (paper) and 72.7% F1 (the models uploaded here).
 
 
