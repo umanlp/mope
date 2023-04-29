@@ -7,7 +7,9 @@ This repository contains the code for our EACL 2023 Findings paper for predictin
 
 The code can be used to replicate our results from the paper:
 
-<a href="https://aclanthology.org/xx.pdf">Our kind of people? Detecting populist references in political debates</a>
+[Our kind of people? Detecting populist references in political debates](./docs/MoPE_paper_EACL_findings_2023.pdf)
+
+<a href="https://aclanthology.org/xx.pdf"></a>
 
 
 ```
