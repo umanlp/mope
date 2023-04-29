@@ -169,7 +169,6 @@ RUN = config_parser['PARAM']['run']
 logging_steps = len(data_encoded["train"]) // BATCH_SIZE
 train_logfile  = "train_" + model_abbr + "_run_" + str(RUN) + ".log"
 test_logfile   = "logfile_" + model_abbr + "_run_" + str(RUN) + ".log"
-pred_file      = "predictions_" + model_abbr + "_run_" + str(RUN) + ".txt"
 model_save_path = 'models/' + model_abbr + "-" + task + "/run" + str(RUN) + "/"
 file_name = task + "_train_" + model_abbr + "_run_" + str(RUN) + ".txt"
 
@@ -424,7 +423,7 @@ if config_parser['TASK'].getboolean('train') == True:
         model_dir = model_save_path + model_name_str + "_" + new_folder
         model_info = model_abbr + "_" + str(RUN) + "_" + str(epoch_i)
 
-        logging.info("SAVE MODEL TO %s", model_dir)
+        logging.info("SAVE MODEL TO %s", model_dir, model_info)
         helpers.save_model(model_dir, model_info, model, bert_tokenizer)
 
     trainlogfile.close()
@@ -445,11 +444,8 @@ if config_parser['TASK'].getboolean('train') == True:
 
 if config_parser['TASK'].getboolean('test') == True:
   logging.info("Writing logging info to %s", test_logfile)
-  logging.info("Writing predictions to %s", pred_file)
   outputfile = open(test_logfile, 'w')
   outputfile.write(file_name + "\n")
-  predfile = open(pred_file, 'w')
-  predfile.write("WORD\tGOLD\tPRED\n")
 
 
   def model_eval(model, test_dataloader, dic, n):
@@ -507,10 +503,6 @@ if config_parser['TASK'].getboolean('test') == True:
             dic[n]["words"].append(clean_text)
             dic[n]["gold"].append(gold_labels)
             dic[n]["pred"].append(pred_labels)
-            # writing predictions to file, one word per line
-            for i in range(len(clean_text)):
-                predfile.write(clean_text[i] + "\t" + gold_labels[i] + "\t" + pred_labels[i] + "\n")
-            predfile.write("\n")
 
     return dic
 
@@ -531,7 +523,6 @@ dic = model_eval(model2, test_dataloader, dic, 2)
 dic = model_eval(model3, test_dataloader, dic, 3)
 
 outputfile.close()
-predfile.close()
 print_results(dic, resfile)
 
 
