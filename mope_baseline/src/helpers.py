@@ -23,19 +23,16 @@ def load_input(data):
 
 ### Models
 
-def save_model(output_dir, model_info, model, tokenizer):
+def save_model(output_dir, model, tokenizer):
     # Create output directory if needed
-    out_path = output_dir # + '/' + model_info
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
-    if not os.path.exists(output_dir + '/' + model_info):
-        os.makedirs(output_dir + '/' + model_info)
 
-    print("Saving model to %s" % out_path)
+    print("Saving model to %s" % output_dir)
 
     model_to_save = model.module if hasattr(model, 'module') else model  # Take care of distributed/parallel training
-    model_to_save.save_pretrained(out_path)
-    tokenizer.save_pretrained(out_path)
+    model_to_save.save_pretrained(output_dir)
+    tokenizer.save_pretrained(output_dir)
 
 
 

@@ -358,10 +358,9 @@ def model_training(model, train_encoded, train_dataloader, val_dataloader, epoch
 
         new_folder = "Epochs_" + str(epoch_i) + "_" + model_no + "/"
         model_dir = model_save_path + model_name_str + "_" + new_folder
-        model_info = model_abbr + "_" + str(RUN) + "_" + str(epoch_i)  
 
         logging.info("SAVE MODEL TO %s", model_dir)
-        helpers.save_model(model_dir, model_info, model, bert_tokenizer)
+        helpers.save_model(model_dir, model, bert_tokenizer)
 
         if do_test == True:
             test_dic = model_eval(model, test_dataloader, test_dic, epoch_i)
