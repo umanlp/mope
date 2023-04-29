@@ -5,9 +5,9 @@
 
 This repository contains the code for our EACL 2023 Findings paper for predicting mentions of the people and the elite in political text. 
 
-The code can be used to replicate our results from the paper:
+The code can be used to replicate the results from our paper: 
 
-<a href="https://aclanthology.org/xx.pdf">Our kind of people? Detecting populist references in political debates</a>
+<a href="https://aclanthology.org/xx.pdf">Our kind of people? Detecting populist references in political debates</a> (URL to be updated)
 
 
 ```
@@ -18,7 +18,7 @@ The code can be used to replicate our results from the paper:
     Ponzetto, Simone",
     booktitle = "Findings of EACL",
     year = 2023,
-    pages = ""
+    pages = "" (to be updated)
 }
 ```
 
