@@ -149,3 +149,39 @@ at the cost of recall. F1 for both are nearly the same, with 72.5% F1 on the Eng
 test set (paper) and 72.7% F1 (the models uploaded here).
 
 
+
+### Training a new tri-training model
+
+You can train a new model on the training data and evaluate it on the test set, using this script:
+
+```typescript
+python src/mope_tri-training.py config/train-mbert-l3.conf predictions.txt
+```
+
+The predictions for each model are written to "predictions.txt". You can evaluate the results, using the eval.py script:
+
+```typescript
+python eval.py predictions.txt
+```
+The script outputs results for each model and results for the majority vote from the three classifiers.
+
+
+If you want to change the model parameters or input/output path, you need to change the config file in the config folder.  
+The model also requires unlabelled data for tri-training (set the path to the unlabelled data in the config file). 
+In the paper, we sampled 20,000 sentences from the English Europarl-UdS data (see reference below).
+
+
+```typescript
+@inproceedings{Karakanta2018b,
+title = {{EuroParl-UdS: P}reserving and Extending Metadata in Parliamentary Debates},
+author = {Alina Karakanta and Mihaela Vela and Elke Teich},
+url = {http://lrec-conf.org/workshops/lrec2018/W2/pdf/10_W2.pdf},
+year = {2018},
+date = {2018},
+booktitle = {ParlaCLARIN workshop, 11th Language Resources and Evaluation Conference (LREC2018)},
+address = {Miyazaki, Japan},
+pubstate = {published},
+}
+```
+
+
