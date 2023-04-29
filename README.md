@@ -22,7 +22,7 @@ The code can be used to replicate our results from the paper:
 }
 ```
 
-### Content of this repo:
+### Content of this repository:
 
 ```
 - mope_baseline_system
@@ -54,6 +54,10 @@ The code can be used to replicate our results from the paper:
       - data (the labelled train/dev/test data for each annotation level)
 
     - README.md (this readme file)
+    - docs
+        - MoPE_paper_EACL_findings_2023.pdf 
+        - MoPE-Annotation_Guidelines_English.pdf
+        - MoPE-Datasheet.pdf
 ```
 
 ------------------------
