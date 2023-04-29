@@ -148,7 +148,8 @@ if config_parser['TASK'].getboolean('pred') == True:
     dic = {}
 
     for cp in checkpoints:
-        cp_name = cp.replace('models/', '').replace('/run1/', '').replace('/run2/','').replace('/run3/','')
+        #cp_name = cp.replace('models/', '').replace('/run1/', '').replace('/run2/','').replace('/run3/','')
+        cp_name = cp.split('/')[3]
         pred[cp_name] = []
         dic[cp_name]  = {"words":[], "gold":[], "pred":[]}
         test_logfile   = 'results/tri-testlog-' + lang + '-' + cp_name + '.txt'

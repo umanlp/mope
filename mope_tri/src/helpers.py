@@ -16,8 +16,6 @@ def load_input(data):
     attention_masks = LongTensor(data['attention_mask'])
     label_ids = LongTensor(data['labels'])
     seq_lengths = LongTensor(seq_lengths)
-    #token_type_ids = LongTensor(data['token_type_ids'])
-    #print("ids", len(input_ids), "mask", len(attention_masks), "labels", len(label_ids), "seq len", seq_lengths.shape)    
     return input_ids, attention_masks, label_ids, seq_lengths
 
 
@@ -25,7 +23,7 @@ def load_input(data):
 
 def save_model(output_dir, model_info, model, tokenizer):
     # Create output directory if needed
-    out_path = output_dir # + '/' + model_info
+    out_path = output_dir + '/' + model_info
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     if not os.path.exists(output_dir + '/' + model_info):
