@@ -11,13 +11,14 @@ The code can be used to replicate our results from the paper:
 
 
 ```
-@inproceedings{bamberg-etal-2022-improved,
+@inproceedings{XX,
     title = "Our kind of people? Detecting populist references in political debates",
     author = "Christopher Klamm and
     Rehbein, Ines  and
     Ponzetto, Simone",
-    booktitle = "Proceedings of EACL",
+    booktitle = "Findings of EACL",
     year = 2023,
+    pages = ""
 }
 ```
 
