@@ -1,7 +1,7 @@
 # Our kind of people? Detecting populist references in political debates
 
 ------------------------
-## Repository Description
+## Repository description
 
 This repository contains the code for our EACL 2023 Findings paper for predicting mentions of the people and the elite in political text. 
 
@@ -22,7 +22,7 @@ The code can be used to replicate our results from the paper:
 }
 ```
 
-### Content:
+### Content of this repo:
 
 ```
 - mope_baseline_system
@@ -39,7 +39,7 @@ The code can be used to replicate our results from the paper:
           - run[1-3]
       - results
         - (folder for system predictions and results)
-
+      - data (the labelled train/dev/test data for each annotation level)
 
 - mope_tri_system 
       - models/ORL-1 (the 3 MoPE models)
@@ -51,17 +51,7 @@ The code can be used to replicate our results from the paper:
         - evaluation.py
       - config (the config files)  
       - models
-        - 
-      - results
-
-      - data
-        - MOPE
-          - l1
-            - train/dev/test.json
-          - l2
-            - train/dev/test.json
-          - l3
-            - train/dev/test.json
+      - data (the labelled train/dev/test data for each annotation level)
 
     - README.md (this readme file)
 ```
@@ -173,14 +163,14 @@ In the paper, we sampled 20,000 sentences from the English Europarl-UdS data (se
 
 ```typescript
 @inproceedings{Karakanta2018b,
-title = {{EuroParl-UdS: P}reserving and Extending Metadata in Parliamentary Debates},
-author = {Alina Karakanta and Mihaela Vela and Elke Teich},
-url = {http://lrec-conf.org/workshops/lrec2018/W2/pdf/10_W2.pdf},
-year = {2018},
-date = {2018},
-booktitle = {ParlaCLARIN workshop, 11th Language Resources and Evaluation Conference (LREC2018)},
-address = {Miyazaki, Japan},
-pubstate = {published},
+    title = {{EuroParl-UdS: P}reserving and Extending Metadata in Parliamentary Debates},
+    author = {Alina Karakanta and Mihaela Vela and Elke Teich},
+    url = {http://lrec-conf.org/workshops/lrec2018/W2/pdf/10_W2.pdf},
+    year = {2018},
+    date = {2018},
+    booktitle = {ParlaCLARIN workshop, 11th Language Resources and Evaluation Conference (LREC2018)},
+    address = {Miyazaki, Japan},
+    pubstate = {published},
 }
 ```
 
