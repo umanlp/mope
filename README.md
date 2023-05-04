@@ -7,18 +7,22 @@ This repository contains the code for our EACL 2023 Findings paper for predictin
 
 The code can be used to replicate the results from our paper: 
 
-<a href="https://aclanthology.org/xx.pdf">Our kind of people? Detecting populist references in political debates</a> (URL to be updated)
+<a href="https://aclanthology.org/2023.findings-eacl.91.pdf">Our kind of people? Detecting populist references in political debates</a> 
 
 
 ```
-@inproceedings{XX,
+@inproceedings{klamm-etal-2023-kind,
     title = "Our kind of people? Detecting populist references in political debates",
-    author = "Christopher Klamm and
-    Rehbein, Ines  and
-    Ponzetto, Simone",
-    booktitle = "Findings of EACL",
-    year = 2023,
-    pages = "" (to be updated)
+    author = "Klamm, Christopher  and
+      Rehbein, Ines  and
+      Ponzetto, Simone Paolo",
+    booktitle = "Findings of the Association for Computational Linguistics: EACL 2023",
+    month = may,
+    year = "2023",
+    address = "Dubrovnik, Croatia",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.findings-eacl.91",
+    pages = "1227--1243"
 }
 ```
 
